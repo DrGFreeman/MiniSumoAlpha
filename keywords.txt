@@ -18,6 +18,7 @@ ledsOnMode	KEYWORD2
 move	KEYWORD2
 play	KEYWORD2
 selectMode	KEYWORD2
+setBorderThreshold	KEYWORD2
 setMotorTrims	KEYWORD2
 
 BUZZER_ENABLED	LITERAL1

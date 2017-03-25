@@ -26,6 +26,9 @@ public:
   // Set motor speeds from fwdSpeed & turnSpeed
   void move(int fwdSpeed, int turnSpeed);
 
+  // Set border detection threshold for QTR sensors
+  void setBorderThreshold(unsigned int threshold);
+
   // Set motor trims in 1 / 40 fraction
   void setMotorTrims(unsigned int trimLeft, unsigned int trimRight);
 

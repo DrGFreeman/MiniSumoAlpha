@@ -85,6 +85,12 @@ void MiniSumoCore::move(int fwdSpeed, int turnSpeed)
   motors.setM2Speed((fwdSpeed + turnSpeed) * _trimRight / 40);
 }
 
+// Set border detection threshold for QTR sensors
+void MiniSumoCore::setBorderThreshold(unsigned int threshold)
+{
+  _qtrThreshold = threshold;
+}
+
 // Set motor trims in 1 / 40 fraction
 void MiniSumoCore::setMotorTrims(unsigned int trimLeft, unsigned int trimRight)
 {
