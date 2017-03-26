@@ -97,3 +97,9 @@ void MiniSumoCore::setMotorTrims(unsigned int trimLeft, unsigned int trimRight)
   _trimLeft = trimLeft;
   _trimRight = trimRight;
 }
+
+// Stop motors
+void MiniSumoCore::stop()
+{
+  motors.setSpeeds(0, 0);
+}

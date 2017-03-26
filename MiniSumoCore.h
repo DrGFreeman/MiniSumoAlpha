@@ -32,6 +32,9 @@ public:
   // Set motor trims in 1 / 40 fraction
   void setMotorTrims(unsigned int trimLeft, unsigned int trimRight);
 
+  // Stop motors
+  void stop();
+
 private:
   // QTR sensors
   unsigned int _qtrThreshold;
