@@ -64,7 +64,7 @@ int PID::getCmdStep(int setPoint, int procVar, unsigned int timeStep)
 {
   // Calculate error terms
   int error = setPoint - procVar;
-  _errorIntegral += (error + _errorPrevious) / 2 * timeStep;
+  _errorIntegral += (error + _errorPrevious) / 2 * long(timeStep);
   float errorDerivative = (error - _errorPrevious) / float(timeStep);
 
   // Set last error to current error
