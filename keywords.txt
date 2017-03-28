@@ -40,6 +40,16 @@ setBorderThreshold	KEYWORD2
 setMotorTrims	KEYWORD2
 stop	KEYWORD2
 
+#Opponent
+
+Opponent	KEYWORD1
+
+check   KEYWORD2
+direction   KEYWORD2
+isInSight   KEYWORD2
+position    KEYWORD2
+timeLastSeen    KEYWORD2
+
 #PID
 
 PID	KEYWORD1
