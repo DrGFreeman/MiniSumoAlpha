@@ -15,14 +15,7 @@ int PID::boundCmd(int cmdIn)
 
   if (_boundRange)
   {
-    if (cmdIn < _cmdMin)
-    {
-      cmdOut = _cmdMin;
-    }
-    else if (cmdIn > _cmdMax)
-    {
-      cmdOut = _cmdMax;
-    }
+    cmdOut = constrain(cmdIn, _cmdMin, _cmdMax);
   }
   return cmdOut;
 }
