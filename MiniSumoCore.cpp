@@ -21,9 +21,6 @@ void MiniSumoCore::checkBorder()
 {
   // Read QTR sensors
   _qtrRC.read(_qtrValues);
-  //Serial.print(_qtrValues[0]);
-  //Serial.print("\t");
-  //Serial.println(_qtrValues[1]);
 
   // Reset state variables
   _overBorderL = false;
