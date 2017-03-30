@@ -44,11 +44,11 @@ stop	KEYWORD2
 
 Opponent	KEYWORD1
 
-check   KEYWORD2
-direction   KEYWORD2
-isInSight   KEYWORD2
-position    KEYWORD2
-timeLastSeen    KEYWORD2
+check	KEYWORD2
+direction	KEYWORD2
+isInSight	KEYWORD2
+position	KEYWORD2
+timeLastSeen	KEYWORD2
 
 #PID
 
