@@ -9,8 +9,8 @@ Opponent::Opponent(unsigned int maxDist, const byte mfSize) :
   _maxDist = maxDist;
 
   // Set Sharp sensors parameters
-  _sensL.setModel(_sensL.GP2Y0A60SZLF_5V);
-  _sensR.setModel(_sensR.GP2Y0A60SZLF_5V);
+  _sensL.setModel(SharpDistSensor::GP2Y0A60SZLF_5V);
+  _sensR.setModel(SharpDistSensor::GP2Y0A60SZLF_5V);
   _sensL.setValMinMax(134, 875);
   _sensR.setValMinMax(134, 875);
 }
