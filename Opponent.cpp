@@ -1,9 +1,7 @@
 #include <Opponent.h>
 
-// Window size for sensors median filter
-const byte irMFSize = 7;
-
-Opponent::Opponent(unsigned int maxDist, const byte mfSize) :
+// Constructor
+Opponent::Opponent(unsigned int maxDist, const byte mfSize = 7) :
   _sensL(A0, mfSize), _sensR(A2, mfSize)
 {
   _maxDist = maxDist;
@@ -95,4 +93,10 @@ int Opponent::position()
 unsigned long Opponent::timeLastSeen()
 {
   return _timeLastSeen;
+}
+
+// Return time since opponent was last seen (in ms)
+unsigned long Opponent::timeSinceLastSeen()
+{
+  return millis() - _timeLastSeen;
 }

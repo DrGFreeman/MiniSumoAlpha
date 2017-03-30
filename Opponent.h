@@ -37,6 +37,9 @@ public:
   // Return time when opponent was last seen (in ms)
   unsigned long timeLastSeen();
 
+  // Return time since opponent was last seen (in ms)
+  unsigned long timeSinceLastSeen();
+
 private:
   // Opponent direction
   byte _direction;
