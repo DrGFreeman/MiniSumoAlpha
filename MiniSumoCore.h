@@ -45,7 +45,7 @@ private:
   bool _overBorderL;
   bool _overBorderR;
 
-  // Motor trims in x / 40 fraction
+  // Motor trims in 1 / 40 fraction
   int _trimLeft;
   int _trimRight;
 };
