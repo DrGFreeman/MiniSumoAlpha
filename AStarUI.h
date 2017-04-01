@@ -47,6 +47,9 @@ public:
    */
   byte battLevelMode();
 
+  // Perform countdown
+  void countdown(unsigned int delay);
+
   // Flash leds according to defined mode as 3 bit integer (0-7)
   void flashLedsMode(byte mode, unsigned int duration);
 

@@ -45,6 +45,52 @@ byte AStarUI::battLevelMode()
   return mode;
 }
 
+// Perform countdown
+void AStarUI::countdown(unsigned int delay)
+{
+  unsigned long endTime = millis() + delay;
+
+  // turn LEDs off
+  ledsOff();
+
+  // Do nothing until last five seconds
+  while (millis() < endTime - 5000)
+  {}
+
+  // Last five seconds; turn on red LED
+  ledRed(1);
+
+  // Do nothing until last three seconds
+  while (millis() < endTime - 3000)
+  {}
+
+  // Last three seconds start playing beeps
+  play(NOTES_BEEP_SHORT);
+
+  // Do nothing until last two seconds
+  while (millis() < endTime - 2000)
+  {}
+  play(NOTES_BEEP_SHORT);
+
+  // Do nothing until last seconds
+  while (millis() < endTime - 1000)
+  {}
+  // Last second; play beep and turn on yellow LED
+  play(NOTES_BEEP_SHORT);
+  ledRed(0);
+  ledYellow(1);
+
+
+
+  // Do nothing until end of countdown
+  while (millis() < endTime)
+  {}
+  // End of countdown; play long beep and turn on green LED
+  play(NOTES_BEEP_LONG);
+  ledYellow(0);
+  ledGreen(1);
+}
+
 // Flash leds according to defined mode as 3 bit integer
 void AStarUI::flashLedsMode(byte mode, unsigned int duration)
 {
@@ -133,6 +179,8 @@ byte AStarUI::selectMode(unsigned int waitTime)
   byte mode = 0;
 
   unsigned long waitStartTime = millis();
+
+  ledsOff();
 
   if (_buzzerMode == BUZZER_ENABLED)
   {
