@@ -18,8 +18,8 @@ byte AStarUI::battLevelMode()
 {
   unsigned int batteryMV = readBatteryMillivoltsLV();
 
-  const unsigned int BATTERY_LOW = 7000;
-  const unsigned int BATTERY_MED = 7400;
+  const unsigned int BATTERY_LOW = 6400;
+  const unsigned int BATTERY_MED = 7000;
 
   // Red LED always on
   byte mode = 4;
